@@ -1,8 +1,4 @@
-# EX 4 SETTING UP A SCALABLE FILE STORAGE SYSTEM USING AMAZON ELASTIC FILE SYSTEM
-```
-Name: Kumudhini T
-Reg no: 212222040084
-```
+# SETTING UP A SCALABLE FILE STORAGE SYSTEM USING AMAZON ELASTIC FILE SYSTEM
  
 ## AIM :
 To set up a scalable file storage system using Amazon Elastic File System (EFS) for two EC2 instances in different availability zones, enabling shared access to data.
@@ -49,7 +45,7 @@ Navigate to the mounted directory, list files, and view the content of the file 
 sudo su
 yum install httpd -y
 yum install -y amazon-efs-utils
-mount -t efs -o tls fs-064645ac116a12816:/ /var/www/html
+mount -t efs -o tls fs-0ec15375fb7cb131d:/ /var/www/html
 cd /var/www/html
 vi file  # Create a file and add some text
 ```
@@ -59,27 +55,30 @@ vi file  # Create a file and add some text
 sudo su
 yum install httpd -y
 yum install -y amazon-efs-utils
-mount -t efs -o tls fs-064645ac116a12816:/ /var/www/html
+mount -t efs -o tls fs-0ec15375fb7cb131d:/ /var/www/html
 cd /var/www/html
 ls
 cat file  # Verify shared access by reading content created in Instance 1
 ```
+### REGISTER NUMBER: 212222040084
+### NAME : KUMUDHINI T
+
 ## OUTPUT :
 
 ### Both EC2 instances showing EFS mounting. 
+![Untitled design (3)](https://github.com/user-attachments/assets/3fe4cb23-a34f-48c7-b97f-591785de8c71)
 
-![image](https://github.com/user-attachments/assets/c509af1a-92eb-45bc-bb31-9e0dc7174233)
-![ec20](https://github.com/user-attachments/assets/b9f9af9d-9d66-46fd-9c0c-2344c807e401)
+![image](https://github.com/user-attachments/assets/3fc48854-ca46-4e11-ae3c-aa09a085f0ae)
 
 ### The creation of a file on Instance 1.
-![386867756-6a2dc41d-04d5-4ed0-a5fe-3ec978530201](https://github.com/user-attachments/assets/06278bed-0d75-4de9-ad7c-af0e274b6f4b)
-
+![image](https://github.com/user-attachments/assets/561c8493-bfec-4c0e-a367-323e131e5ed2)
 
 ### The display of that file’s contents on Instance 2 to verify shared access
-![386867765-f6f4d03c-6ddf-4490-a79e-faf3f033c9f2](https://github.com/user-attachments/assets/dfab1afc-10ff-4b69-9a4a-f35c0362e388)
-
+![image](https://github.com/user-attachments/assets/0ff02266-1b46-4883-94ec-1ddc9197e5a0)
 
 ## RESULT :
 Successfully set up a scalable file storage system using Amazon EFS shared between two Linux EC2 instances in different availability zones, enabling consistent data sharing.
  
   
+
+
